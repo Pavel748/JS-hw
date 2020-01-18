@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HW1</title>
+    <style>
+        button {
+            margin: 30px;
+            padding: 10px;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <button onclick="task1()">Задание 1</button>
+    <button onclick="task2()">Задание 2</button>
+    <button onclick="task3()">Задание 3</button>
+    <script>
+        function task1() {
+            var Tc = prompt('Введите температуру в цельсиях');
+            var Tf = (9 / 5) * Tc + 32;
+            console.log(Tf);
+        }
+
+        function task2() {
+            var name = "Василий";
+            var admin = name;
+            console.log(admin);
+        }
+
+        function task3() {
+            var num = 1000 + "108";
+            console.log(num);
+        }
+    </script>
+</body>
+
+</html>
