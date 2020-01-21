@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+        
+        .btn {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+   <p>Первое задание в комментариях</p>
+    <button onclick="task2()">второе задание</button>
+    <button onclick="task3()">третье задание</button>
+    <button onclick="task4()">четвертое задание</button>
+    <button onclick="mathOperation()">шестое задание</button>
+    <div>
+        <button class="btn" onclick="task5m()">пятое задание Умножение</button>
+        <button class="btn" onclick="task5d()">пятое задание Деление</button>
+        <button class="btn" onclick="task5p()">пятое задание Сложение</button>
+        <button class="btn" onclick="task5min()">пятое задание Вычитание</button>
+    </div>
+    <script>
+        /*<!--
+                                                                     var a = 1, b = 1, c, d;
+                                                                  c = ++a; alert(c);           // 2 префикс а+1
+                                                                  d = b++; alert(d);           // 1 постфикс сначала вывод потом +1
+                                                                  c = (2+ ++a); alert(c);      // 5 2 + префикс а = 3
+                                                                  d = (2+ b++); alert(d);      // 4 тоже самое только на b постфикс после  b становится равной 3
+                                                                  alert(a);                    // 3 см выше    
+                                                                  alert(b);                    // 3 см выше
+                                                     
+                                                     -->*/
+        var a = Math.round(prompt("введите первое число переменной а"))
+        var b = Math.round(prompt("введите второе число переменной b"))
+
+        function task2() {
+            var a = 2
+            var x = 1 + (a *= 2)
+            console.log(x) // x=5
+        }
+
+        function task3() {
+            if (a >= 0 && b >= 0) {
+                console.log(a - b)
+            }
+            else if (a < 0 && b < 0) {
+                console.log(a * b)
+            }
+            else if (a < 0 || b < 0) {
+                console.log(a + b)
+            }
+            else {
+                alert("я сказал число")
+            }
+        }
+
+        function task4() {
+            var c = +prompt("введите число от 1 до 15")
+            if (a > 0 && a <= 15) {
+                switch (a) {
+                case 1:
+                    console.log(c++)
+                case 2:
+                    console.log(c++)
+                case 3:
+                    console.log(c++)
+                case 4:
+                    console.log(c++)
+                case 5:
+                    console.log(c++)
+                case 6:
+                    console.log(c++)
+                case 7:
+                    console.log(c++)
+                case 8:
+                    console.log(c++)
+                case 9:
+                    console.log(c++)
+                case 10:
+                    console.log(c++)
+                case 11:
+                    console.log(c++)
+                case 12:
+                    console.log(c++)
+                case 13:
+                    console.log(c++)
+                case 14:
+                    console.log(c++)
+                case 15:
+                    console.log(c)
+                    break
+                default:
+                    console.log("Error")
+                }
+            }
+            else {
+                console.log("Не похоже что это число")
+            }
+        }
+
+        function task5m() {
+            console.log(mult(a, b))
+
+            function mult(a, b) {
+                return (a * b)
+            }
+        }
+
+        function task5p() {
+            console.log(mult(a, b))
+
+            function mult(a, b) {
+                return (a + b)
+            }
+        }
+
+        function task5min() {
+            console.log(mult(a, b))
+
+            function mult(a, b) {
+                return (a - b)
+            }
+        }
+
+        function task5d() {
+            console.log(mult(a, b))
+
+            function mult(a, b) {
+                return (a / b)
+            }
+        }
+
+        function mathOperation(a, b, operation) {
+            var operation = prompt("Введите действие")
+            switch (operation) {
+            case "+":
+            case "cложение":
+            case "плюс":
+                task5p()
+                break
+            case "-":
+            case "минус":
+            case "вычитание":
+                task5min()
+                break
+            case "/":
+            case "деление":
+                task5d()
+                break
+            case "*":
+            case "умножение":
+                task5m()
+                break
+            default:
+                alert("Варианты ввода: * + - / или текстовые аналоги")
+            }
+        }
+        
+        
+        
+ 
+    </script>
+</body>
+
+</html>
